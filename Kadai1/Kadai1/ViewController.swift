@@ -27,22 +27,12 @@ final class ViewController: UIViewController {
         
         var total: Int = 0
         
-        if let number1 = Int.init(self.textField1.text!) {
-            total += number1
-        }
-        if let number2 = Int.init(self.textField2.text!) {
-            total += number2
-        }
-        if let number3 = Int.init(self.textField3.text!) {
-            total += number3
-        }
-        if let number4 = Int.init(self.textField4.text!) {
-            total += number4
-        }
-        if let number5 = Int.init(self.textField5.text!) {
-            total += number5
-        }
-        
+        total += Int(self.textField1.text!) ?? 0
+        total += Int(self.textField2.text!) ?? 0
+        total += Int(self.textField3.text!) ?? 0
+        total += Int(self.textField4.text!) ?? 0
+        total += Int(self.textField5.text!) ?? 0
+
         self.label.text = total.description
         
     }
